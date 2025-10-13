@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Modern Login Page</title>
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    body {
+
+      margin: 0;
+
+      height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80')
+
+        no-repeat center center/cover;
+
+    }
+
+    .login-container {
+
+      background: rgba(0, 0, 0, 0.6);
+
+      backdrop-filter: blur(8px);
+
+      border-radius: 20px;
+
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+
+      width: 350px;
+
+      padding: 40px 30px;
+
+      color: white;
+
+      text-align: center;
+
+      animation: fadeIn 1s ease-in-out;
+
+    }
+
+    @keyframes fadeIn {
+
+      from { opacity: 0; transform: scale(0.9); }
+
+      to { opacity: 1; transform: scale(1); }
+
+    }
+
+    h2 {
+
+      margin-bottom: 25px;
+
+      color: #00ffff;
+
+      letter-spacing: 1px;
+
+    }
+
+    .input-group {
+
+      margin-bottom: 20px;
+
+      text-align: left;
+
+    }
+
+    label {
+
+      display: block;
+
+      font-size: 0.9em;
+
+      margin-bottom: 6px;
+
+      color: #aee;
+
+    }
+
+    input {
+
+      width: 100%;
+
+      padding: 10px 15px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      background: rgba(255, 255, 255, 0.15);
+
+      color: white;
+
+      font-size: 1em;
+
+      outline: none;
+
+      transition: 0.3s;
+
+    }
+
+    input:focus {
+
+      background: rgba(255, 255, 255, 0.25);
+
+      box-shadow: 0 0 10px #00ffff;
+
+    }
+
+    button {
+
+      width: 100%;
+
+      padding: 12px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      background: #00ffff;
+
+      color: #000;
+
+      font-weight: bold;
+
+      font-size: 1.1em;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+
+    }
+
+    button:hover {
+
+      background: #00cccc;
+
+      transform: scale(1.03);
+
+    }
+
+    .links {
+
+      margin-top: 15px;
+
+      font-size: 0.9em;
+
+    }
+
+    .links a {
+
+      color: #00ffff;
+
+      text-decoration: none;
+
+      transition: 0.3s;
+
+    }
+
+    .links a:hover {
+
+      text-decoration: underline;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="login-container">
+
+    <h2>Welcome Back</h2>
+
+    <div class="input-group">
+
+      <label for="username">Username</label>
+
+      <input type="text" id="username" placeholder="Enter username" />
+
+    </div>
+
+    <div class="input-group">
+
+      <label for="password">Password</label>
+
+      <input type="password" id="password" placeholder="Enter password" />
+
+    </div>
+
+    <button onclick="login()">Login</button>
+
+    <div class="links">
+
+      <p><a href="#">Forgot Password?</a> | <a href="#">Create Account</a></p>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function login() {
+
+      const user = document.getElementById('username').value;
+
+      const pass = document.getElementById('password').value;
+
+      if (user === "" || pass === "") {
+
+        alert("Please fill in all fields!");
+
+      } else {
+
+        alert(`Welcome, ${user}!`);
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+  </html>
