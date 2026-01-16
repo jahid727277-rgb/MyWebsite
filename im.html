@@ -14,18 +14,17 @@
   }
 
   body {
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(135deg, #1e1e2f, #3a3a52);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    padding: 20px;
   }
 
   .container {
     text-align: center;
-    width: 100%;
+    width: 90%;
     max-width: 900px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.08);
@@ -46,7 +45,6 @@
   .image-box {
     margin-bottom: 30px;
     position: relative;
-    width: 100%;
   }
 
   .skeleton {
@@ -70,8 +68,6 @@
 
   .image-box img {
     width: 100%;
-    max-width: 100%;
-    height: auto;
     border-radius: 15px;
     border: 3px solid #00ffcc;
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
@@ -96,40 +92,16 @@
   }
 
   @media (max-width: 768px) {
-    body {
-      padding: 10px;
-    }
-    .container {
-      padding: 20px;
-    }
-    h1 { 
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
+    h1 { font-size: 2.2rem; }
     .coming { font-size: 1.7rem; }
     .author { font-size: 1rem; }
+    .container { padding: 20px; }
     .skeleton { height: 250px; }
   }
 
   @media (max-width: 480px) {
-    body {
-      padding: 10px;
-    }
-    .container {
-      padding: 15px;
-    }
-    h1 { 
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-    .coming { 
-      font-size: 1.4rem;
-      margin-top: 10px;
-    }
-    .author {
-      font-size: 0.9rem;
-      margin-top: 8px;
-    }
+    h1 { font-size: 1.8rem; }
+    .coming { font-size: 1.4rem; }
     .skeleton { height: 200px; }
   }
 </style>
